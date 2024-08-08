@@ -8,7 +8,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/docs' },
+      { text: 'Docs', link: '/documentation' },
       { text: 'Downloads', link: '/downloads' },
       { text: 'Examples', link: '/examples' },
     ],
@@ -19,14 +19,14 @@ export default defineConfig({
       {
         text: 'Docs',
         items: [
-          { text: 'How to Merge?', link: '/docs/merge' },
-          { text: 'How to Split?', link: '/docs/split' },
-          { text: 'How to Compress?', link: '/docs/compress' },
-          { text: 'How to Pdf2Images?', link: '/docs/pdf2images' },
-          { text: 'How to Images2Pdf?', link: '/docs/images2pdf' },
-          { text: 'How to EncryptPdf?', link: '/docs/encryptpdf' },
-          { text: 'How to UnlockPdf?', link: '/docs/unlockpdf' },
-          { text: 'How to RedactPdf?', link: '/docs/redactpdf' }
+          { text: 'How to Merge?', link: '/documentation/merge' },
+          { text: 'How to Split?', link: '/documentation/split' },
+          { text: 'How to Compress?', link: '/documentation/compress' },
+          { text: 'How to Pdf2Images?', link: '/documentation/pdf2images' },
+          { text: 'How to Images2Pdf?', link: '/documentation/images2pdf' },
+          { text: 'How to EncryptPdf?', link: '/documentation/encryptpdf' },
+          { text: 'How to UnlockPdf?', link: '/documentation/unlockpdf' },
+          { text: 'How to RedactPdf?', link: '/documentation/redactpdf' }
         ]
       },
       {
