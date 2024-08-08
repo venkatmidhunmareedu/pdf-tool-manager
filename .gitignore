@@ -1,3 +1,5 @@
 pdftools/
 Configuration.txt
 __pycache__/
+pdfs/
+*.pdf
