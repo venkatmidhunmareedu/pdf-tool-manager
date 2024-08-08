@@ -3,8 +3,8 @@ import os
 from PyPDF2 import PdfReader, PdfWriter
 
 @click.command(name="merge")
-@click.option('-i', '--input', help="Input file path",multiple=True, required=True)
-@click.option('-o', '--output', help="Output file path",required=True)
+@click.option('-i', '--input', help="Input pdf file path",multiple=True, required=True)
+@click.option('-o', '--output', help="Output pdf file path",required=True)
 def cmd(input, output):
     """Merge pdf files from an end to end"""
     if len(input) < 2:
@@ -14,6 +14,9 @@ def cmd(input, output):
     for file in input:
         if not os.path.exists(file):
             raise click.BadParameter(f"Input file '{file}' does not exist.")
+        # check if the file is a pdf
+        if not file.endswith('.pdf'):
+            raise click.BadParameter(f"Input file '{file}' is not a PDF file.")
     
     # merge the pdfs 
     pdf_writer = PdfWriter()
