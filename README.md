@@ -102,17 +102,10 @@ pyinstaller --onefile --noconsole main.py
 # use cmd to run the .exe file using the instruction above
 ```
 
-## Usage
-
-Run `ptm` followed by the command and its flags to use the desired functionality. For example:
-
-```bash
-ptm merge -i file1.pdf -i file2.pdf -o combined.pdf
-```
-
 ## Todo 
 
-- Complete the remaining features and more features are welcome.
+- Complete the remaining features 
+- More features are welcome. If you have any suggestions, please let me know via [GitHub issues](https://github.com/venkatmidhunmareedu/pdf-tool-manager/issues).
 - Add more functionalities.
 - Complete the readme and add more details.
 - Reduce the complexity of the code.
