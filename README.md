@@ -120,5 +120,3 @@ Feel free to submit issues or pull requests to improve PDF Tool Manager.
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to modify any details to better fit your project or preferences!
