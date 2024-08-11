@@ -11,6 +11,12 @@ export default defineConfig({
       { text: 'Docs', link: '/documentation' },
       { text: 'Downloads', link: '/downloads' },
       { text: 'Examples', link: '/examples' },
+      {
+        text : 'v 0.0.1 Beta',
+        items: [
+          { text: 'v 0.0.1 Beta', link: '/documentation' }
+        ]
+      }
     ],
 
     search: { provider: 'local' },

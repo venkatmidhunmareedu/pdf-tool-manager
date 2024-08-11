@@ -8,10 +8,19 @@ import zipfile
 @click.option('-o', '--output', help="Output zip file path", required=True)
 def cmd(input, output):
     """Split pdf file into odd and even pages and output as zip file having two pdf files."""
+    # Check if the input file extension is .pdf
+    if not input.endswith('.pdf'):
+        raise click.BadParameter(f"Input file '{input}' must have .pdf extension.")
     # Check if the input file exists
     if not os.path.exists(input):
         raise click.BadParameter(f"Input file '{input}' does not exist.")
     
+    # check if the output file extension is .zip
+    if not output.endswith('.zip'):
+        raise click.BadParameter(f"Output file '{output}' must have .zip extension.")
+    # check if the output dir path exists if not create it
+    if not os.path.exists(os.path.dirname(output)):
+        os.makedirs(os.path.dirname(output))
     # Define output paths for split PDF files
     odd_pdf_path = "odd_pages.pdf"
     even_pdf_path = "even_pages.pdf"

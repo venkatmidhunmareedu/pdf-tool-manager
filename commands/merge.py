@@ -18,6 +18,12 @@ def cmd(input, output):
         if not file.endswith('.pdf'):
             raise click.BadParameter(f"Input file '{file}' is not a PDF file.")
     
+    # check if the output file extension is .pdf 
+    if not output.endswith('.pdf'):
+        raise click.BadParameter(f"Output file '{output}' must have .pdf extension.")
+    # check if the output dir path exists if not create it
+    if not os.path.exists(os.path.dirname(output)):
+        os.makedirs(os.path.dirname(output))
     # merge the pdfs 
     pdf_writer = PdfWriter()
 
