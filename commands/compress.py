@@ -5,7 +5,7 @@ from pdfminer.high_level import extract_text
 import pikepdf
 
 @click.command(name="compress")
-@click.option('-i', '--input', help="Input PDF file path", required=True, multiple=True)
+@click.option('-i', '--input', help="Input PDF file path", required=True)
 @click.option('-o', '--output', help="Output PDF file path", required=True)
 def cmd(input, output):
     """Compress PDF files to reduce size while optimizing quality."""
