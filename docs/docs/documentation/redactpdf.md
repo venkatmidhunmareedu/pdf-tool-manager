@@ -1,1 +1,0 @@
-Redact pdf documentation goes here

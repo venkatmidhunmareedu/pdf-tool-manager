@@ -1,1 +1,0 @@
-Redact pdf example goes here

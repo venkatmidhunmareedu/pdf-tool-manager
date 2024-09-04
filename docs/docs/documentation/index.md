@@ -1,1 +1,1 @@
-This the index page for the docs
+This is the index of the docs

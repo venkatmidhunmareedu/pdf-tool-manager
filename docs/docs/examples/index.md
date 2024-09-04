@@ -1,1 +1,0 @@
-This the index page for the examples

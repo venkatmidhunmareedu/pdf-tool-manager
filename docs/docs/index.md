@@ -30,9 +30,5 @@ features:
     details: Convert JPG, PNG, and SVG images to PDF.
   - title: Encrypt PDF
     details: Encrypt a PDF file with a password.
-  - title: Unlock PDF
-    details: Unlock a PDF file protected by a password.
-  - title: Redact PDF
-    details: Remove sensitive data from a PDF file and cover it up with asterisks.
 ---
 
