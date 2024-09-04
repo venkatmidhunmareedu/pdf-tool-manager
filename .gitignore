@@ -6,3 +6,6 @@ pdfs/
 node_modules/
 cache/
 *.zip
+dist/
+build/
+*.spec
