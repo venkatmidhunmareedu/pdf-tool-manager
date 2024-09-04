@@ -1,6 +1,7 @@
 import click
 import os
 from PyPDF2 import PdfReader, PdfWriter
+from utils.check import check_pdf, check_dir
 
 @click.command(name="merge")
 @click.option('-i', '--input', help="Input pdf file path",multiple=True, required=True)
@@ -12,18 +13,11 @@ def cmd(input, output):
     
     # Check if the input files exist
     for file in input:
-        if not os.path.exists(file):
-            raise click.BadParameter(f"Input file '{file}' does not exist.")
-        # check if the file is a pdf
-        if not file.endswith('.pdf'):
-            raise click.BadParameter(f"Input file '{file}' is not a PDF file.")
-    
-    # check if the output file extension is .pdf 
-    if not output.endswith('.pdf'):
-        raise click.BadParameter(f"Output file '{output}' must have .pdf extension.")
+        check_pdf(file)
+
     # check if the output dir path exists if not create it
-    if not os.path.exists(os.path.dirname(output)):
-        os.makedirs(os.path.dirname(output))
+    check_dir(os.path.dirname(output))
+    
     # merge the pdfs 
     pdf_writer = PdfWriter()
 

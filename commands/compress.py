@@ -3,6 +3,8 @@ import os
 from PyPDF2 import PdfReader, PdfWriter
 from pdfminer.high_level import extract_text
 import pikepdf
+from utils.check import check_pdf, check_dir
+
 
 @click.command(name="compress")
 @click.option('-i', '--input', help="Input PDF file path", required=True)
@@ -10,19 +12,11 @@ import pikepdf
 def cmd(input, output):
     """Compress PDF files to reduce size while optimizing quality."""
     
-    # Check if the input files exist
-    for file in input:
-        if not os.path.exists(file):
-            raise click.BadParameter(f"Input file '{file}' does not exist.")
-        if not file.endswith('.pdf'):
-            raise click.BadParameter(f"Input file '{file}' is not a PDF file.")
-    
-    # check if the output file extension is .pdf 
-    if not output.endswith('.pdf'):
-        raise click.BadParameter(f"Output file '{output}' must have .pdf extension.")
+    # check if the input files exist
+    check_pdf(input)
+
     # check if the output dir path exists if not create it
-    if not os.path.exists(os.path.dirname(output)):
-        os.makedirs(os.path.dirname(output))
+    check_dir(os.path.dirname(output))
     
     # Initialize PdfWriter to write the compressed PDF
     pdf_writer = PdfWriter()

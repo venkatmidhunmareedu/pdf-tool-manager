@@ -2,25 +2,23 @@ import click
 import os
 from PyPDF2 import PdfReader, PdfWriter
 import zipfile
+from utils.check import check_pdf, check_dir, check_zip
 
 @click.command(name="splitoe")
 @click.option('-i', '--input', help="Input pdf file path", required=True)
 @click.option('-o', '--output', help="Output zip file path", required=True)
 def cmd(input, output):
     """Split pdf file into odd and even pages and output as zip file having two pdf files."""
-    # Check if the input file extension is .pdf
-    if not input.endswith('.pdf'):
-        raise click.BadParameter(f"Input file '{input}' must have .pdf extension.")
-    # Check if the input file exists
-    if not os.path.exists(input):
-        raise click.BadParameter(f"Input file '{input}' does not exist.")
-    
-    # check if the output file extension is .zip
-    if not output.endswith('.zip'):
-        raise click.BadParameter(f"Output file '{output}' must have .zip extension.")
+    # check if the input files exist
+    check_pdf(input)
+
     # check if the output dir path exists if not create it
-    if not os.path.exists(os.path.dirname(output)):
-        os.makedirs(os.path.dirname(output))
+    check_dir(os.path.dirname(output))
+
+    # check if the output file is a zip file
+    check_zip(output)
+
+
     # Define output paths for split PDF files
     odd_pdf_path = "odd_pages.pdf"
     even_pdf_path = "even_pages.pdf"
