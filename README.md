@@ -21,7 +21,7 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
      - `-o`: Output zip file path
    - **Example:**
      ```bash
-     ptm split -i input.pdf -o output.zip
+     ptm splitoe -i input.pdf -o output.zip
      ```
 
 3. **Compress**
@@ -65,26 +65,6 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
      ptm encryptpdf -i input.pdf -p password -o output.pdf
      ```
 
-7. **Unlock PDF**
-   - **Description:** Unlock a PDF file protected by a password.
-   - **Flags:** 
-     - `-i`: Input file
-     - `-p`: Password
-     - `-o`: Output PDF file path
-   - **Example:**
-     ```bash
-     ptm unlockpdf -i input.pdf -p password -o output.pdf
-     ```
-
-8. **Redact PDF**
-   - **Description:** Remove sensitive data from a PDF and cover it up with "*" using a machine learning model.
-   - **Flags:** 
-     - `-i`: Input file
-     - `-o`: Output PDF file path
-   - **Example:**
-     ```bash
-     ptm redactpdf -i input.pdf -o output.pdf
-     ```
 
 ## Installation
 
