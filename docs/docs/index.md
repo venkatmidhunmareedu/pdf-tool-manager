@@ -13,9 +13,6 @@ hero:
     - theme: alt
       text: Downloads
       link: /downloads
-    - theme: alt
-      text: Examples
-      link: /examples
 
 features:
   - title: Merge PDF 
