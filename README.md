@@ -22,15 +22,13 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm merge -i input1.pdf -i input2.pdf -o output.pdf
-
-     ```
+   ```
 
   
 
-2. **Split**
+2. **Splitoe**
 
    - **Description:** Split a PDF file into separate files for odd and even pages, and package them into a zip file.
 
@@ -42,11 +40,9 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm splitoe -i input.pdf -o output.zip
-
-     ```
+   ```
 
   
 
@@ -62,11 +58,9 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm compress -i input.pdf -o output.pdf
-
-     ```
+   ```
 
   
 
@@ -82,11 +76,9 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm pdf2images -i input.pdf -o output.zip
-
-     ```
+   ```
 
   
 
@@ -102,11 +94,9 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm images2pdf -i input -o output.pdf
-
-     ```
+   ```
 
   
 
@@ -124,11 +114,9 @@ PDF Tool Manager (ptm) is a versatile command-line tool for managing and manipul
 
    - **Example:**
 
-     ```bash
-
+   ```bash
      ptm encryptpdf -i input.pdf -p password -o output.pdf
-
-     ```
+   ```
 
   
 
